@@ -6,7 +6,7 @@
 
 body{
     z-index: 1;
-    background: url(img/photo-of-a-night-city-by-the-sea.jpg);
+    background: url(img/sunsets-sun-nice-sea-cool-sunset-large-awesome-beautiful-nature-photography-desktop.jpg);
     background-size: cover;
 }
 
@@ -20,7 +20,7 @@ body{
 
 #form{
     margin: 50px 0px 50px 0px;
-    background: rgba(255,255,255,0.30);
+    background: rgba(0,0,0,0.30);
     z-index: 2;
 }
 
@@ -60,7 +60,7 @@ color: white;
 }
 #footer{
     margin: 50px 0px 50px 0px;
-    background: rgba(255,255,255,0.30);
+    background: rgba(0,0,0,0.30);
     z-index: 2;
     margin-bottom: 0;
 }
