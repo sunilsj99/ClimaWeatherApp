@@ -3,8 +3,8 @@ $('#searchForm').on('submit', function(e)  {
     e.preventDefault();
   let city = $('#searchCity').val();
   $.ajax({
-        url:    "http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=7b59acf5e3dd562ebb2dfe7fb89d3c4b&units=metric",
-        dataType: "jsonp",
+        url:    "https://api.apixu.com/v1/current.json?key=e3a625102ad248b699f85243170707&q="+city,
+        dataType: "json",
         method: 'get',
         success: function(data){
            getWeather(data); 
@@ -15,9 +15,11 @@ $('#searchForm').on('submit', function(e)  {
 });
 
 function getWeather(data){
-    $("#country").html('<h2>' + data.name + ', ' + data.sys.country + '</h2>');
-    $("#image").html('<img src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png" height="50px" width="50px">');
-    $("#clima").html('<h3>' + data.weather[0].main +'</h3><h3>'+ data.weather[0].description + '</h3><h3><strong>Temperature</strong> :     ' + data.main.temp +' &#8451</h3><h3><strong>Atmospheric pressure</strong> :    ' + data.main.pressure + ' hPa</h3><h3><strong>Humidity</strong> :      ' + data.main.humidity + ' %</h3><h3><strong>Temperature Range</strong> :     ' + data.main.temp_min + ' &#8451  -  ' + data.main.temp_max + ' &#8451</h3><h3><strong>Wind Speed</strong> :       ' + data.wind.speed + ' meter/sec</h3><h3><strong>Wind Direction</strong> :       ' + data.wind.deg + ' &deg</h3>');
+    
+    
+    $("#country").html('<h2>' + data.location.name + ', ' + data.location.region + ', '+ data.location.country +'</h2>');
+    $("#image").html('<img src="https:'+data.current.condition.icon+'" height="50px" width="50px">');
+    $("#clima").html('<h3>' + data.current.condition.text +'</h3><h3><strong>Date and Time</strong> :     ' + data.location.localtime +' </h3><h3><strong>Temperature</strong> :     ' + data.current.temp_c +' &#8451</h3><h3><strong>Temperature feels like</strong> :     ' + data.current.feelslike_c +' &#8451</h3><h3><strong>Atmospheric pressure</strong> :    ' + data.current.pressure_mb + ' millibars</h3><h3><strong>Humidity</strong> :      ' + data.current.humidity + ' %</h3><h3><strong>Wind Speed</strong> :       ' + data.current.wind_mph + ' miles/hour</h3><h3><strong>Wind Direction</strong> :       ' + data.current.wind_degree + ' &deg</h3>');
 
 }
-        
+    
