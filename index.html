@@ -25,7 +25,7 @@
                 </form>
 	    	</div>	
             </div>
-    <div class="jumbotron animated fadeInLeft" id="form">
+    <div class="jumbotron animated fadeInLeft result" id="form">
     <div id="country"></div>
     <div id="image"></div>
     <div id="clima"></div>
@@ -36,6 +36,14 @@
         
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+       $('.result').hide();
+        $('#searchForm').on('submit', function (){
+           $('.result').fadeIn(5000); 
+        });
+    });
+    </script>
     <script src="weather.js" type="text/javascript"></script>
     <script  type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
