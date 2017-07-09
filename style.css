@@ -24,6 +24,22 @@ body{
     z-index: 2;
 }
 
+#fore{
+    margin-top: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Zilla Slab', serif;
+}
+
+#fore:hover, #fore:active{
+    opacity: 0.8;
+}
+
+.forecast{
+    color: white;
+    font-size: 18px;
+}
+
 #searchForm{
     z-index: 3;
 }
@@ -39,6 +55,11 @@ h4{
     font-size: 20px;
     padding: 20px 0 20px 0;
     font-family: 'Zilla Slab', serif;
+}
+
+#return{
+    font-size: 20px;
+    margin-top: 80px;
 }
 
 #country{
@@ -79,5 +100,11 @@ color: white;
     }
     #submitCity{
     margin-top: 10px;
-}
+    }
+    #fore{
+        font-size: 17px;
+    }
+    #f2,#f3,#f4,#f5,#f6{
+        margin-top: 20px;
+    }
 }
