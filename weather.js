@@ -16,7 +16,7 @@ $('#searchForm').on('submit', function(e)  {
         e.preventDefault();
         let cityf = $('#searchCity').val();
          $.ajax({
-        url:    "http://api.apixu.com/v1/forecast.json?key=e3a625102ad248b699f85243170707&q="+ cityf +"&days=7",
+        url:    "https://api.apixu.com/v1/forecast.json?key=e3a625102ad248b699f85243170707&q="+ cityf +"&days=7",
         dataType: "json",
         method: 'get',
         success: function(str){
